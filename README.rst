@@ -28,6 +28,56 @@ Features
 
 * TODO
 
+Installation
+============
+
+To install the module, run:
+
+.. code-block:: bash
+
+   pip install .
+
+Usage
+=====
+
+You can use this module as a library in your Python code:
+
+.. code-block:: python
+
+   from uniprot_demo import get_protein_domains
+
+   uniprot_id = "P12345"
+   domains_df = get_protein_domains(uniprot_id)
+   print(domains_df)
+
+You can also use it as a command line tool:
+
+.. code-block:: bash
+
+   uniprot-domains P12345
+
+Configuration
+=============
+
+You can customize the configuration by creating a `config.json` file with the following content:
+
+.. code-block:: json
+
+   {
+     "cache_expiration_seconds": 3600
+   }
+
+Then, set the `MY_UNIPROT_MODULE_CONFIG` environment variable to the path of the custom configuration file.
+
+Tests
+=====
+
+To run the tests, execute:
+
+.. code-block:: bash
+
+   python -m unittest discover tests
+
 Credits
 -------
 
